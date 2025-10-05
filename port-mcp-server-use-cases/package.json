@@ -1,0 +1,29 @@
+{
+  "name": "port-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Port.io integration with software catalog queries, scorecard analysis, service management, and development operations",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "port-mcp-server": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js",
+    "start": "node build/index.js",
+    "dev": "npm run build && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["mcp", "port.io", "software-catalog", "scorecard", "ai", "llm"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.1.0",
+    "axios": "^1.7.7",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.4"
+  },
+  "files": ["build"]
+}
